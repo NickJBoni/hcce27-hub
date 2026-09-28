@@ -9,7 +9,7 @@ slide decks and photos. Never edit it to serve 2027, and never point this repo a
 
 ## Status, 2026-09-27
 
-Nothing is announced. No dates, no speakers, no partners, no agenda. This site exists so
+Dates are announced. No speakers, no partners, no agenda. This site exists so
 there is a real URL to hand people and something to bookmark. Two pages only:
 
 1. `/` Welcome. Says more is coming, tells people to bookmark it, shows the venue.
@@ -23,13 +23,15 @@ time.
 
 ## Dates
 
-`data/event.json` has `dates: null`. Every surface reads `eventDates` from
-`src/lib/event.ts`, which falls back to `datesTBD`. To announce, set `dates` once and it
-updates the home page, the venue block, and the page metadata together. Do not type a
-date into a component.
+**September 15-17, 2027**, a Wednesday to Friday, set 2026-09-27. It lives once, in
+`data/event.json`. Every surface reads `eventDates` from `src/lib/event.ts`, which falls
+back to `datesTBD` when `dates` is null. Do not type a date into a component.
 
-`datesAnnounced` is exported for anything that should appear only once dates exist. The
-home page uses it to show the "still to come" line and hide it later.
+`datesAnnounced` is exported for anything that should appear only once dates exist.
+Nothing uses it right now, and note what it is NOT for: the home page's "agenda,
+speakers and partners are still to come" line was briefly gated on it, which would have
+hidden that line the moment dates landed even though the lineup was still unknown. Dates
+existing says nothing about the lineup existing.
 
 ## Hard copy rules
 

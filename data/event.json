@@ -1,9 +1,9 @@
 {
-  "_note": "2027 edition. Venue carried over from 2026 on Nick's confirmation 2026-09-27 that it is Yard and Sea in Pacific Beach again. Dates are null until announced and every surface that shows them falls back to datesTBD, so nothing has to be hunted down later: set dates and it appears everywhere at once.",
+  "_note": "2027 edition. Venue carried over from 2026 on Nick's confirmation 2026-09-27 that it is Yard and Sea in Pacific Beach again. Dates set 2026-09-27: September 15-17, 2027, a Wednesday to Friday, same shape as 2026. Every surface reads eventDates from src/lib/event.ts, so this value is the only place a date is written.",
   "name": "Home Care Champions Experience",
   "year": 2027,
   "edition": "4th Annual",
-  "dates": null,
+  "dates": "September 15-17, 2027",
   "datesTBD": "Dates to be announced",
   "venue": {
     "name": "Yard and Sea",

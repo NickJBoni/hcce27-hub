@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { datesAnnounced, event, eventDates } from '@/lib/event';
+import { event, eventDates } from '@/lib/event';
 import home from '../../data/home.json';
 
 export default function HomePage() {
@@ -48,13 +48,12 @@ export default function HomePage() {
         <p className="mt-1 text-sm text-offwhite">{event.venue.address}</p>
         <p className="display mt-4 text-xs text-offwhite/70">Dates</p>
         <p className="mt-0.5 text-sm font-semibold text-yellow">{eventDates}</p>
-        {/* Only once there is a schedule worth teasing. */}
-        {!datesAnnounced && (
-          <p className="mt-4 border-t border-teal pt-3 text-sm text-offwhite">
-            Agenda, speakers, and partners are still to come. They will appear here as they
-            are confirmed.
-          </p>
-        )}
+        {/* Stays until there is an agenda to link to. Deliberately NOT tied to
+            whether dates exist: dates landing does not mean the lineup has. */}
+        <p className="mt-4 border-t border-teal pt-3 text-sm text-offwhite">
+          Agenda, speakers, and partners are still to come. They will appear here as they
+          are confirmed.
+        </p>
       </section>
     </div>
   );
