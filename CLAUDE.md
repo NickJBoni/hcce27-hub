@@ -53,8 +53,12 @@ Carried over from 2026. These are not style preferences.
   2027 dates are set, or leave it out.
 - `data/home.json` welcome copy is **Claude's draft**, not Nick's words, unlike the 2026
   file which was verbatim. Nick should rewrite it when he has a minute.
-- The accommodations link is the permanent page on homecarechampionsexperience.com, not
-  a dated room block, so it did not need replacing.
+- The Stay section on Getting Here is Nick's copy from 2026-09-27, replacing the single
+  accommodations link. Three corrections were made and flagged to him: his Vrbo href was
+  `https://homecarechampionsexperience.com/www.vrbo.com`, a relative-link mistake that
+  404s; his Airbnb link pointed at the Irish domain; and "fit's" was a typo. Every hotel
+  URL was verified 200 on 2026-09-27. Re-check them before the event, small hotels change
+  domains.
 
 ## Workflow
 

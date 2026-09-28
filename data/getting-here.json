@@ -1,5 +1,5 @@
 {
-  "_note": "Carried over from the 2026 hub on Nick's confirmation 2026-09-27 that 2027 is the same venue and the same area, so parking, the airport, the things to do and the eats all still apply. One removal: the Miramar Air Show entry named September 26-28, which is the 2026 show, and would have been wrong for 2027. Restore it with the right dates once 2027 dates are set. The accommodations link is the permanent page on homecarechampionsexperience.com, not a dated room block, so it carries over safely.",
+  "_note": "Carried over from the 2026 hub on Nick's confirmation 2026-09-27 that 2027 is the same venue and the same area, so parking, the airport, the things to do and the eats all still apply. One removal: the Miramar Air Show entry named September 26-28, which is the 2026 show, and would have been wrong for 2027. Restore it with the right dates once 2027 dates are set. The single accommodations link was replaced 2026-09-27 by the full stay section Nick supplied, which lists the rental sites and the five nearby hotels inline.",
   "parking": {
     "image": "/getting-here/parking.webp",
     "alt": "Aerial map of the venue showing the front entrance on Garnet Avenue and the private event guest parking lot off Bayard Street.",
@@ -57,11 +57,6 @@
       }
     ]
   },
-  "accommodations": {
-    "label": "Accommodations",
-    "url": "https://homecarechampionsexperience.com/accommodations",
-    "note": "The event is not at a hotel so there is no room block."
-  },
   "thingsToDo": {
     "title": "Things To Do While You're Here",
     "items": [
@@ -111,6 +106,54 @@
           "Considered one of the most unique veterans memorials in America. The only memorial that honors veterans, living or deceased, from the revolutionary war to the current war on terror, with an image of the veteran.",
           "Mt. Soledad National Veterans Memorial has stood at the height of San Diego since 1954. It has gone through many trials to be what it is today, A Beacon of Freedom. Thousands of people that stood before our memorial were able to honor and recognize the thousands of military men and women who sacrificed for this country."
         ]
+      }
+    ]
+  },
+  "stay": {
+    "_note": "Nick's copy 2026-09-27, with three corrections, all flagged to him: the Vrbo href he supplied was https://homecarechampionsexperience.com/www.vrbo.com, a relative-link mistake carried over from the old site that returns 404, corrected to https://www.vrbo.com/; the Airbnb link pointed at airbnb.ie, the Irish domain, switched to .com for a US audience; and \"fit's\" corrected to \"fits\". Distances normalised to a leading zero and lowercase miles, his list mixed \".2 miles\" and \".7 Miles\". Every hotel URL verified 200 on 2026-09-27.",
+    "title": "Stay",
+    "intro": [
+      "The event is not at a hotel so there is no room block, however, there are a ton of options that are in walking distance."
+    ],
+    "rentals": {
+      "copy": "are great options to find a space that fits your needs.",
+      "links": [
+        {
+          "label": "Airbnb",
+          "url": "https://www.airbnb.com/"
+        },
+        {
+          "label": "Vrbo",
+          "url": "https://www.vrbo.com/"
+        }
+      ]
+    },
+    "hotelsTitle": "Hotels Near Venue",
+    "hotels": [
+      {
+        "name": "Tower23 Hotel",
+        "url": "https://www.t23hotel.com/",
+        "distance": "0.2 miles from venue"
+      },
+      {
+        "name": "Ocean Park Inn",
+        "url": "https://oceanparkinn.com/",
+        "distance": "0.2 miles from venue"
+      },
+      {
+        "name": "Pacific View Inn",
+        "url": "https://www.pacificviewinn.com/",
+        "distance": "0.3 miles from venue"
+      },
+      {
+        "name": "Pacific Terrace",
+        "url": "https://www.pacificterrace.com/",
+        "distance": "0.4 miles from venue"
+      },
+      {
+        "name": "Catamaran Resort Hotel and Spa",
+        "url": "https://www.catamaranresort.com/",
+        "distance": "0.7 miles from venue"
       }
     ]
   }

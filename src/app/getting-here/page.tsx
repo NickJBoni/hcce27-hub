@@ -27,15 +27,22 @@ interface Parking {
 interface LinkOut {
   label: string;
   url: string;
-  note?: string;
+}
+
+interface Stay {
+  title: string;
+  intro: string[];
+  rentals: { copy: string; links: LinkOut[] };
+  hotelsTitle: string;
+  hotels: { name: string; url: string; distance: string }[];
 }
 
 export default function GettingHerePage() {
   const data = gettingHere as unknown as Record<string, ProseSection | undefined> & {
     parking: Parking;
-    accommodations?: LinkOut;
+    stay?: Stay;
   };
-  const { parking, accommodations } = data;
+  const { parking, stay } = data;
 
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     `${event.venue.name}, ${event.venue.address}`,
@@ -74,19 +81,55 @@ export default function GettingHerePage() {
         </section>
       )}
 
-      {accommodations && (
+      {stay && (
         <section>
-          <a
-            href={accommodations.url}
-            target="_blank"
-            rel="noreferrer"
-            className="block border-l-4 border-yellow bg-paper p-4 shadow-sm transition-colors hover:border-navy"
-          >
-            <p className="display text-lg text-navy">&rarr; {accommodations.label}</p>
-            {accommodations.note && (
-              <p className="mt-1 text-sm text-muted">{accommodations.note}</p>
-            )}
-          </a>
+          <h2 className="display pb-3 text-xl text-navy">{stay.title}</h2>
+
+          <div className="border-l-4 border-yellow bg-paper p-4 shadow-sm">
+            {stay.intro.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)} className="text-sm leading-relaxed text-ink/80">
+                {paragraph}
+              </p>
+            ))}
+
+            {/* The rental sites read as one sentence, so they sit inline rather
+                than as their own cards. */}
+            <p className="mt-3 text-sm leading-relaxed text-ink/80">
+              {stay.rentals.links.map((link, i) => (
+                <span key={link.url}>
+                  {i > 0 && ' and '}
+                  <a
+                    className="font-semibold text-navy hover:underline"
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link.label}
+                  </a>
+                </span>
+              ))}{' '}
+              {stay.rentals.copy}
+            </p>
+          </div>
+
+          <h3 className="display pb-2 pt-6 text-sm text-muted">{stay.hotelsTitle}</h3>
+          <ul className="grid gap-3">
+            {stay.hotels.map((hotel) => (
+              <li key={hotel.url} className="border-l-4 border-navy bg-paper shadow-sm">
+                <a
+                  href={hotel.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-baseline justify-between gap-3 p-4 transition-colors hover:bg-offwhite"
+                >
+                  <span className="font-semibold text-navy hover:underline">
+                    &rarr; {hotel.name}
+                  </span>
+                  <span className="whitespace-nowrap text-xs text-muted">{hotel.distance}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 
