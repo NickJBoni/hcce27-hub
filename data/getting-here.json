@@ -1,0 +1,117 @@
+{
+  "_note": "Carried over from the 2026 hub on Nick's confirmation 2026-09-27 that 2027 is the same venue and the same area, so parking, the airport, the things to do and the eats all still apply. One removal: the Miramar Air Show entry named September 26-28, which is the 2026 show, and would have been wrong for 2027. Restore it with the right dates once 2027 dates are set. The accommodations link is the permanent page on homecarechampionsexperience.com, not a dated room block, so it carries over safely.",
+  "parking": {
+    "image": "/getting-here/parking.webp",
+    "alt": "Aerial map of the venue showing the front entrance on Garnet Avenue and the private event guest parking lot off Bayard Street.",
+    "copy": null
+  },
+  "flights": {
+    "title": "Flights",
+    "items": [
+      {
+        "name": "San Diego International Airport (SAN)",
+        "body": []
+      }
+    ]
+  },
+  "eats": {
+    "title": "Things To Eat/Drink While You're Here",
+    "items": [
+      {
+        "name": "Oscars",
+        "body": [
+          "My absolute favorite spot for tacos in Pacific Beach. Fresh, laid back, nothing fancy. Get the seafood tacos."
+        ],
+        "_note": "VOICE REWRITE, 2026-09-10, at Nick's request. These words are Claude's, not Nick's. Same facts as the original, no new ones: Pacific Beach, Nick's favorite taco spot, fresh, relaxed, seafood tacos. His opening phrase 'my absolute favorite spot for tacos' is kept verbatim. Original wording is in git history at commit 81eadb3."
+      },
+      {
+        "name": "Nico's",
+        "body": [
+          "Walk-up seafood counter on Emerald, a few blocks from the venue. Best poke in the neighborhood and one of my go-to spots. Order online ahead of time if you don't want to stand in line."
+        ]
+      },
+      {
+        "name": "JRDN",
+        "body": [
+          "Oceanfront restaurant inside the TOWER23 Hotel on Felspar, right on the boardwalk and a short walk from the venue. Sushi, seafood, and the best patio in Pacific Beach for a drink at sunset. It's pronounced \"Jordan.\""
+        ]
+      },
+      {
+        "name": "Prince's Pizza",
+        "body": [
+          "Hand-tossed pies in Pacific Beach, and a proper local spot. The walls are covered in signed photos of celebrities who stopped in for a slice. Laid back and easy. Worth it if you want good pizza by the beach."
+        ],
+        "_note": "VOICE REWRITE, 2026-09-10, at Nick's request. These words are Claude's, not Nick's. Same facts as the original, no new ones: Pacific Beach, hand-tossed, laid back, signed celebrity photos, pizza by the beach. Original wording is in git history at commit cd747b0. This is the only entry on the site not written by Nick."
+      },
+      {
+        "name": "Dirty Birds",
+        "body": [
+          "On Mission Blvd, walkable from the venue. Not the most San Diego thing you can do while you're here, but if you want wings, they have the best in town. Casual and loud. Good spot to land with a group after the day wraps."
+        ]
+      },
+      {
+        "name": "In-N-Out",
+        "body": [
+          "If you're not from California, this is the one you've heard about. Closest location is about a ten minute drive from Pacific Beach on Damon Ave. Go once. Order it animal style."
+        ]
+      }
+    ]
+  },
+  "accommodations": {
+    "label": "Accommodations",
+    "url": "https://homecarechampionsexperience.com/accommodations",
+    "note": "The event is not at a hotel so there is no room block."
+  },
+  "thingsToDo": {
+    "title": "Things To Do While You're Here",
+    "items": [
+      {
+        "name": "USS Midway Museum",
+        "body": [
+          "Located in downtown San Diego, the USS Midway (Museum) was America’s longest-serving aircraft carrier of the 20th century. Today, the interactive museum is an unforgettable adventure for the entire family as guests walk in the footsteps of the 225,000 young men who served on Midway.",
+          "Visitors explore a floating city at sea, the amazing flight deck and its 29 restored aircraft, flight simulators, and are inspired in the Battle of Midway Theater, included with admission. Admission also includes a self-guided audio tour narrated by Midway sailors in English, Mandarin, Spanish, Japanese, French and German. Visiting Midway is a once-in-a-lifetime experience in San Diego, known around the world as \"Navy Town, USA.\""
+        ]
+      },
+      {
+        "name": "The San Diego Zoo",
+        "body": [
+          "The San Diego Zoo pioneered cageless exhibits and offers travelers a fun and informative experience. Featuring over 4000 animals, the park gives you a peek into the wildlife of several ecosystems, from deserts to rainforests.",
+          "Ride the tour bus, which crosses three quarters of the zoo’s area, and learn more about the animals from the guide as you view them in their natural habitats. You can also hop on the Skyfari gondola lift to see the entire park from above."
+        ]
+      },
+      {
+        "name": "La Jolla Cove",
+        "body": [
+          "At this beach surrounded by sandstone cliffs on the San Diego coast, the water is calm enough for travelers to enjoy diving and snorkeling. Walk along the rocky shore to spot large colonies of sea lions lounging in their natural habitat and looking after their pups, and have a picnic while soaking up the views of the ocean from the cliffs at sunset. If you visit at low tide, you’ll get to swim in the crystal clear tidal pools as well."
+        ]
+      },
+      {
+        "name": "Balboa Park",
+        "body": [
+          "This 1,200-acre nature park comprises 17 museums, gardens, musical theaters, a sports complex, and the world-famous San Diego Zoo. The park’s Spanish-Moorish architecture and 19 distinct gardens (some require admission fees) attract both tourists and locals.",
+          "Don’t miss the San Diego Air and Space Museum, the Spanish Village Art Center for unique handicrafts, and the Spreckels Organ Pavilion, where free concerts are hosted in the evenings. Travelers recommend putting aside the whole day to explore the park."
+        ]
+      },
+      {
+        "name": "Torrey Pines State Natural Reserve",
+        "body": [
+          "Although this park is located within San Diego's city limits, it remains one of the wildest landscapes along the Southern California coast, with miles of unspoiled beaches, chaparral, elegant Torrey Pine trees and a lagoon vital to many species of migrating birds."
+        ]
+      },
+      {
+        "name": "Sunset Cliffs Natural Park",
+        "body": [
+          "As the name suggests, this park’s rugged coastline features magnificent ocean views at sunset. Don’t miss the chance to explore the tide pools. Be careful as some parts of the climb down can be uneven and steep.",
+          "Sunset Cliffs Natural Park is also a great spot to see gray whales passing by on their migration. There are drinking fountains throughout the park, but there aren’t any food establishments nearby. Pack lunch as it’s a perfect spot for picnics."
+        ]
+      },
+      {
+        "name": "Mt. Soledad National Veterans Memorial",
+        "body": [
+          "Considered one of the most unique veterans memorials in America. The only memorial that honors veterans, living or deceased, from the revolutionary war to the current war on terror, with an image of the veteran.",
+          "Mt. Soledad National Veterans Memorial has stood at the height of San Diego since 1954. It has gone through many trials to be what it is today, A Beacon of Freedom. Thousands of people that stood before our memorial were able to honor and recognize the thousands of military men and women who sacrificed for this country."
+        ]
+      }
+    ]
+  }
+}

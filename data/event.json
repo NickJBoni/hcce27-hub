@@ -1,0 +1,14 @@
+{
+  "_note": "2027 edition. Venue carried over from 2026 on Nick's confirmation 2026-09-27 that it is Yard and Sea in Pacific Beach again. Dates are null until announced and every surface that shows them falls back to datesTBD, so nothing has to be hunted down later: set dates and it appears everywhere at once.",
+  "name": "Home Care Champions Experience",
+  "year": 2027,
+  "edition": "4th Annual",
+  "dates": null,
+  "datesTBD": "Dates to be announced",
+  "venue": {
+    "name": "Yard and Sea",
+    "address": "875 Garnet Ave, Pacific Beach, San Diego, CA 92109"
+  },
+  "dressCode": "San Diego Casual",
+  "timezone": "America/Los_Angeles"
+}

@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/*
+ * Digital Champions palette. Exact values from the brand identity, no
+ * approximations.
+ *
+ * One hard constraint drives the whole design: yellow and gold are
+ * unreadable as text on light backgrounds (1.41 and 1.61 against white).
+ * So they only ever appear on navy or near black, or as a solid block with
+ * navy sitting on top of them. Everything below respects that.
+ */
+@theme {
+  /* Brand, verbatim */
+  --color-navy:      #003566;
+  --color-deepnavy:  #001d3d;
+  --color-nearblack: #000814;
+  --color-yellow:    #ffd60a;
+  --color-gold:      #ffc300;
+  --color-offwhite:  #e7ecef;
+  --color-teal:      #337289;
+  --color-paper:     #ffffff;
+
+  /* Roles. ink/muted/line are brand colours or derived from them. */
+  --color-ink:    #001d3d;   /* deep navy, 14.19 on off white */
+  --color-muted:  #337289;   /* teal, 4.51 on off white, passes AA */
+  --color-line:   #c4d1da;   /* navy at 15% over off white */
+
+  --font-sans: var(--font-source-sans);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-offwhite);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Display treatment. Source Sans is the only typeface on the site, so
+ * hierarchy comes from weight, case and tracking rather than a second face.
+ * Black weight, uppercase, slightly open tracking so the caps do not jam.
+ */
+.display {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

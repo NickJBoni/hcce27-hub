@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# macOS / iCloud conflict copies ("name 2.ext"). Never wanted in the repo.
+* [0-9].*
