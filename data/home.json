@@ -1,12 +1,12 @@
 {
-  "_note": "Welcome copy for the 2027 hub, drafted by Claude 2026-09-27 from the shape of Nick's 2026 welcome. NOT Nick's verbatim words, unlike the 2026 file. The brief was: say more is coming and tell people to bookmark it. Rewrite freely. Updated 2026-09-27 when the dates were announced.",
+  "_note": "Welcome copy for the 2027 hub. STILL Claude's draft, not Nick's verbatim words, unlike the 2026 file. Rewritten 2026-09-28 on Nick's brief to add warmth: thrilled you're going to be part of it, this is your official home and hub. Voice follows his 2026 welcome, which used \"absolutely thrilled\" and \"we cannot wait\". The dates are deliberately NOT repeated in this prose: the hero directly above already states them from event.json, and duplicating them here would create a second place to update.",
   "welcome": {
-    "lead": "This is your home base for the 4th Annual Home Care Champions Experience, back in San Diego at Yard and Sea.",
+    "lead": "We are absolutely thrilled that you're going to be part of the 4th Annual Home Care Champions Experience!",
     "body": [
-      "We are just getting started on this one. Speakers, the agenda, and everything else will land on this page as they are confirmed.",
-      "Bookmark it now. When we announce, this is where it shows up first.",
-      "In the meantime, the dates are set and the travel and accommodations details are already here, so you can start planning the trip.",
-      "Thank you for being part of this. We cannot wait to do it again."
+      "This is your official home and hub. Everything you need will live right here.",
+      "We are back in San Diego at Yard and Sea, and we cannot wait to do it all again with you.",
+      "Speakers, the agenda, and everything else will land on this page as they are confirmed. Bookmark it now, because when we announce, this is where it shows up first.",
+      "In the meantime, the dates are locked and the travel and accommodations details are already here, so you can start planning your trip. September is a beautiful time to be in San Diego, so make a proper trip out of it."
     ],
     "signoff": "Let's Grow Together!",
     "signature": "Nick and The Digital Champions Team"
