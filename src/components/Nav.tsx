@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { event } from '@/lib/event';
 
 // Two links by Nick's call 2026-09-27: nothing else is announced, and an
 // empty Agenda or People tab makes the site look abandoned rather than early.
@@ -19,8 +20,11 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-20 border-b-4 border-yellow bg-navy">
       <div className="mx-auto max-w-3xl px-4 pt-3">
+        {/* Year first, from event.json, so the masthead cannot drift from the
+            edition the rest of the site is describing. */}
         <Link href="/" className="display block text-base leading-tight text-paper">
-          Home Care Champions Experience
+          <span className="text-yellow">{event.year}</span>{' '}
+          {event.name}
         </Link>
       </div>
       <nav
