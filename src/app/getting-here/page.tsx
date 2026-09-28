@@ -5,8 +5,6 @@ import gettingHere from '../../../data/getting-here.json';
 
 export const metadata: Metadata = { title: 'Getting Here' };
 
-const PROSE_SECTIONS = ['flights', 'thingsToDo', 'eats'] as const;
-
 interface ProseEntry {
   name: string;
   body: string[];
@@ -16,6 +14,49 @@ interface ProseEntry {
 interface ProseSection {
   title: string;
   items: ProseEntry[];
+}
+
+interface Notes {
+  title: string;
+  body: string[];
+}
+
+/**
+ * One page section of named entries. Renders nothing when the section is
+ * missing or empty, which is how unfilled content stays invisible.
+ */
+function Prose({ section }: { section?: ProseSection }) {
+  if (!section || section.items.length === 0) return null;
+
+  return (
+    <section>
+      <h2 className="display pb-3 text-xl text-navy">{section.title}</h2>
+      <ul className="grid gap-3">
+        {section.items.map((entry) => (
+          <li key={entry.name} className="border-l-4 border-navy bg-paper p-4 shadow-sm">
+            <h3 className="display text-lg text-navy">{entry.name}</h3>
+            {entry.body.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)} className="mt-2 text-sm leading-relaxed text-muted">
+                {paragraph}
+              </p>
+            ))}
+            {entry.url && (
+              <p className="mt-3 text-sm">
+                <a
+                  className="font-semibold text-navy hover:underline"
+                  href={entry.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  &rarr; {entry.url.replace(/^https?:\/\//, '')}
+                </a>
+              </p>
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
 }
 
 interface Parking {
@@ -41,8 +82,9 @@ export default function GettingHerePage() {
   const data = gettingHere as unknown as Record<string, ProseSection | undefined> & {
     parking: Parking;
     stay?: Stay;
+    travelNotes?: Notes;
   };
-  const { parking, stay } = data;
+  const { parking, stay, travelNotes } = data;
 
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     `${event.venue.name}, ${event.venue.address}`,
@@ -64,22 +106,21 @@ export default function GettingHerePage() {
         </p>
       </section>
 
-      {parking?.image && (
+
+      {travelNotes && (
         <section>
-          <h2 className="display pb-3 text-xl text-navy">Parking</h2>
-          <div className="overflow-hidden border-t-4 border-navy bg-paper shadow-sm">
-            <Image
-              src={parking.image}
-              alt={parking.alt}
-              width={1200}
-              height={826}
-              className="h-auto w-full"
-            />
-            {/* Renders only once Nick supplies a line. */}
-            {parking.copy && <p className="p-4 text-sm text-muted">{parking.copy}</p>}
+          <h2 className="display pb-3 text-xl text-navy">{travelNotes.title}</h2>
+          <div className="border-l-4 border-teal bg-paper p-4 shadow-sm">
+            {travelNotes.body.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)} className="text-sm leading-relaxed text-ink/80">
+                {paragraph}
+              </p>
+            ))}
           </div>
         </section>
       )}
+
+      <Prose section={data.flights as ProseSection | undefined} />
 
       {stay && (
         <section>
@@ -133,42 +174,27 @@ export default function GettingHerePage() {
         </section>
       )}
 
-      {PROSE_SECTIONS.map((key) => {
-        const section = data[key] as ProseSection | undefined;
-        // Empty by design. Nothing renders until Nick supplies content.
-        if (!section || section.items.length === 0) return null;
 
-        return (
-          <section key={key}>
-            <h2 className="display pb-3 text-xl text-navy">{section.title}</h2>
-            <ul className="grid gap-3">
-              {section.items.map((entry) => (
-                <li key={entry.name} className="border-l-4 border-navy bg-paper p-4 shadow-sm">
-                  <h3 className="display text-lg text-navy">{entry.name}</h3>
-                  {entry.body.map((paragraph) => (
-                    <p key={paragraph.slice(0, 40)} className="mt-2 text-sm leading-relaxed text-muted">
-                      {paragraph}
-                    </p>
-                  ))}
-                  {entry.url && (
-                    <p className="mt-3 text-sm">
-                      <a
-                        className="font-semibold text-navy hover:underline"
-                        href={entry.url}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        &rarr; {entry.url.replace(/^https?:\/\//, '')}
-                      </a>
-                    </p>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </section>
-        );
-      })}
 
+      <Prose section={data.thingsToDo as ProseSection | undefined} />
+      <Prose section={data.eats as ProseSection | undefined} />
+
+      {parking?.image && (
+        <section>
+          <h2 className="display pb-3 text-xl text-navy">Parking</h2>
+          <div className="overflow-hidden border-t-4 border-navy bg-paper shadow-sm">
+            <Image
+              src={parking.image}
+              alt={parking.alt}
+              width={1200}
+              height={826}
+              className="h-auto w-full"
+            />
+            {/* Renders only once Nick supplies a line. */}
+            {parking.copy && <p className="p-4 text-sm text-muted">{parking.copy}</p>}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

@@ -3,14 +3,19 @@
   "parking": {
     "image": "/getting-here/parking.webp",
     "alt": "Aerial map of the venue showing the front entrance on Garnet Avenue and the private event guest parking lot off Bayard Street.",
-    "copy": null
+    "copy": null,
+    "_note": "Moved to the bottom of the page 2026-09-27. It is the least urgent thing here for most of the year: the room flies in, so parking matters only to the locals and only in the last fortnight. Anyone looking for it late is looking FOR it and will find it."
   },
   "flights": {
+    "_note": "Nick's copy 2026-09-27, verbatim. The section was an empty placeholder until now.",
     "title": "Flights",
     "items": [
       {
         "name": "San Diego International Airport (SAN)",
-        "body": []
+        "body": [
+          "Fly into San Diego International Airport (SAN); the venue is just 20 minutes from the airport.",
+          "I am also a huge fan of sitting in a window seat on the left side for a stunning view upon arrival. It is highly recommended to extend your stay while here to fully enjoy all that San Diego has to offer."
+        ]
       }
     ]
   },
@@ -155,6 +160,13 @@
         "url": "https://www.catamaranresort.com/",
         "distance": "0.7 miles from venue"
       }
+    ]
+  },
+  "travelNotes": {
+    "_note": "Nick's copy 2026-09-27, verbatim. Sits above Flights because it is the reason to come early, not a logistic.",
+    "title": "Travel Notes",
+    "body": [
+      "September is one of the best months to be in San Diego because the weather is beautiful, but it’s not summer, so most of the tourists are gone. We call it “local summer!” I strongly recommend making a trip out of your time here."
     ]
   }
 }

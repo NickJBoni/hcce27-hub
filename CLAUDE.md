@@ -13,8 +13,18 @@ Dates are announced. No speakers, no partners, no agenda. This site exists so
 there is a real URL to hand people and something to bookmark. Two pages only:
 
 1. `/` Welcome. Says more is coming, tells people to bookmark it, shows the venue.
-2. `/getting-here` Venue, parking, accommodations, flights, things to do, places to eat.
-   This is the page with actual content, carried over from 2026.
+2. `/getting-here` Venue, travel notes, flights, stay, things to do, places to eat,
+   parking. This is the page with actual content.
+
+   **The order is deliberate and is not alphabetical or historical.** It runs from the
+   decisions people make first to the ones they make last. Stay and flights are what
+   matters for most of the year; parking sits at the bottom because the room flies in,
+   so it is only useful to the locals and only in the final fortnight. Do not "tidy" it
+   back into the 2026 order. Decided with Nick 2026-09-27.
+
+   Urgency does NOT live on this page. It belongs on Home, in one block that changes a
+   few times a year: book your stay, then flights, then arrival and parking two weeks
+   out, then the live agenda on the day. One card, one edit, no date machinery.
 
 Agenda, People, Info and the run of show are deliberately absent, not hidden behind a
 flag. An empty tab reads as abandoned; a missing tab reads as early. Add each page back
